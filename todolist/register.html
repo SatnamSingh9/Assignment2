@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./taskstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cafe! Please fill in details for creating your login.</h1>
+
+        <div class="formcontainer">
+        <hr>
+
+        <!--<form action="register.php" method="POST" onsubmit="return validate_registration();">-->
+        <form action="register_user.php" method="POST">
+            <!-- You will need to write the validate function for this form. -->
+
+            <div class="textfield">
+                <label for="firstname">First Name:</label><br>
+                <input type="text" name="firstname" id="firstname" placeholder="Your First name goes here.."><br>
+                <span id="firstnameError" class="error"></span>
+            </div>
+
+            <div class="textfield">
+                <label for="lastname">Last Name:</label><br>
+                <input type="text" name="lastname" id="lastname" placeholder="Your Last name goes here.."><br>
+                <span id="lastnameError" class="error"></span>
+            </div>
+
+            <div class="textfield">
+                <label for="phone">Phone:</label><br>
+                <input type="text" name="phone" id="phone" placeholder="Your Contact number.."><br>
+                <span id="phone-error" class="error"></span>
+            </div>
+
+            <div class="textfield">
+                <label for="email">Email Address</label><br>
+                <input type="text" name="email" id="email" placeholder="Your Email address.."><br>
+                <span id="email-error" class="error"></span>
+            </div>
+
+           <br>
+           <br>
+
+           <div class="textfield">
+                <label for="username">Username</label><br>
+                <input type="text" name="username" id="username" placeholder="Chose your username.."><br>
+                <span id="username-error" class="error"></span>
+            </div>
+
+
+            <div class="textfield">
+                <label for="pass">Password</label><br>
+                <input type="password" name="pass" id="pass" placeholder="Password"><br>
+                <span id="password-error" class="error"></span>
+            </div>
+        
+            <div class="textfield">
+                <label for="pass2">Re-type Password</label><br>
+                <input type="password" id="pass2" placeholder="Password"><br>
+                <span id="confirm-password-error" class="error"></span>
+            </div>
+
+            <div class = "buttonfield">
+                <button type="submit" id="submit" onclick="return validate_registration();">Sign-Up</button>
+                <button type="reset" id="reset" onclick="clearFields()">Reset</button>
+            </div>
+
+
+            <script src="taskscripts.js"></script>
+        </form>
+    </div>
+    </header>
+</body>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./taskstyles.css">
+</head>
+<body>
+
+<main>
+      <div class="divider"></div>
+
+      <!-- Class to display links to all pages-->
+      <div class="container_head">
+        <a href="//localhost/Demo/todolist/dashboard.php" class="citem">Tasks</a>
+        <a href="//localhost/Demo/todolist/addnewtask.html" class="citem">Add New Task</a>
+        <a href="//localhost/Demo/todolist/completetask.php" class="citem">Complete Task</a>
+       </div>
+
+        <h2> Add new task</h2>
+
+        <div class="formcontainer">
+        <hr>
+
+        <!--<form action="register.php" method="POST" onsubmit="return validate_registration();">-->
+        <form action="addnew_task.php" method="POST">
+            <!-- You will need to write the validate function for this form. -->
+
+            <div class="textfield">
+                <label for="heading">Task Heading:</label><br>
+                <input type="text" name="heading" id="heading" placeholder="What is required for this task?" required><br>
+                <span id="headinherror" class="error"></span>
+            </div>
+
+            <div class="textfield">
+                <label for="sp_instr">Special Instructions:</label><br>
+                <input type="text" name="sp_instr" id="sp_instr" placeholder="Special Instructions for Task, if any.." required><br>
+            </div>
+
+            <div class="textfield">
+                <label for="priority">Priority:</label><br>
+                    <select name="priority" id="priority">     
+                        <option value="normal">Normal</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                <span id="priority-error" class="error"></span>
+            </div>
+
+            <div class="textfield">
+                <label for="requireddate">Required by Date:</label><br>
+                <input type="datetime-local" name="requireddate" id="requireddate" max="2099-12-31" required><br>
+                <span id="requireddate-error" class="error"></span>
+            </div>
+        
+            <div class = "buttonfield">
+                <button type="submit" id="submit" onclick="return validate_task();">Add Task</button>
+                <button type="reset" id="reset" onclick="clearFields()">Reset</button>
+            </div>
+
+            
+
+            <script src="taskscripts.js"></script>
+        </form>
+    </div>
+    </header>
+</body>
